@@ -1,0 +1,16 @@
+import numpy as np
+""" a=np.array([[0,1,2,3,4],[9,8,7,6,5]])
+print(a)
+a1=np.arange(9)
+print(a1)
+a2=np.ones((3,4))
+print(a2)
+a3=np.zeros((3,6),dtype=np.int32)
+print(a3)
+a4=np.eye(7)
+print(a4)
+a5=np.ones((2,3,4,5))
+print(a5)
+print(a5.shape) """
+a6=np.linspace(1,6,10)
+print(a6)
