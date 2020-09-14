@@ -1,0 +1,20 @@
+/* components/x-teacherItem/x-teacherItem.wxss */
+.teacherItem {
+  width: 100px;
+  height: 130px;
+  background-color: blue;
+  border-radius: 8px;
+}
+.teacherItem image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px dashed yellow;
+  box-sizing: border-box;
+}
+.teacherItem text {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: white;
+}

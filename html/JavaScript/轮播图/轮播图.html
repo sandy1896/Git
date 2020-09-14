@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            #outer{
+                width: 520px;
+                height: 333px;
+                margin: 50px auto;
+                background-color: greenyellow;
+                padding: 10px 0;
+                position: relative;
+                overflow: hidden;
+            }
+
+            #imgList{
+                list-style: none;
+                /* width: 2600px; */
+                position: absolute;
+                /* left: -1040px;                 */
+            }
+            #imgList li{
+                float: left;
+                margin: 0 10px;
+            }
+            #navDiv{
+                position: absolute;
+                bottom: 15px;
+                /* left: 197px; */
+            }
+            #navDiv a{
+                width: 15px;
+                height: 15px;
+                background-color: red;
+                float: left;
+                margin: 0 5px;
+                opacity: 0.6;
+                /* 兼容IE8 */
+                filter: alpha(opacity=60);
+            }
+            #navDiv a:hover{
+                background-color: black;
+            }
+        </style>
+        <script src="js/jstools.js"></script>
+        <script>
+            window.onload=function(){
+                var imgList=document.getElementById("imgList");
+                var imgArr=document.getElementsByTagName("img");
+                imgList.style.width=imgArr.length*520+"px";
+                var navDiv=document.getElementById("navDiv");
+                var outer=document.getElementById("outer");
+                navDiv.style.left=(outer.offsetWidth-navDiv.offsetWidth)/2+"px";
+                var index=0;
+                var aArr=document.getElementsByTagName("a");
+                aArr[index].style.backgroundColor="black";
+                for(i=0; i<aArr.length; i++){
+                    aArr[i].num=i;
+                    aArr[i].onclick=function(){
+                        clearInterval(timer);
+                        index=this.num;
+                        // imgList.style.left=index*-520+"px";
+                        setA();
+                        move(imgList, "left", -520*index, 20, function(){
+                            autoChange();
+                        });
+                    }
+                }
+                autoChange();
+                function setA(){
+                    if(index>=imgArr.length-1){
+                        index=0;
+                        imgList.style.left=0;
+                    }                    
+                    for(i=0;i<aArr.length;i++){
+                        aArr[i].style.backgroundColor="";
+                    }
+                    aArr[index].style.backgroundColor="black"
+                }
+                var timer;
+                function autoChange(){
+                    timer=setInterval(function(){
+                        index++;
+                        index%=imgArr.length;
+                        move(imgList, "left", -520*index, 20, function(){
+                            setA();
+                        });                        
+                    },1000);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!--创建一个div，作为轮播图的图框-->
+        <div id="outer">
+            <!--创建一个无序列表ul，放置轮播的图片-->
+            <ul id="imgList">
+                <li>
+                    <img src="img/1.jpg" width="500" height="333"/>
+                </li>
+                <li>
+                    <img src="img/2.jpg" width="500" height="333"/>
+                </li>
+                <li>
+                    <img src="img/3.jpg" width="500" height="333"/>
+                </li>
+                <li>
+                    <img src="img/4.jpg" width="500" height="333"/>
+                </li>
+                <li>
+                    <img src="img/5.jpg" width="500" height="333"/>
+                </li>
+                <li>
+                    <img src="img/1.jpg" width="500" height="333"/>
+                </li>
+            </ul>
+            <div id="navDiv">
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+            </div>
+        </div>
+    </body>
+</html>

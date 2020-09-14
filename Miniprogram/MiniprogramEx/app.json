@@ -1,0 +1,30 @@
+{
+  "window": {
+    "navigationBarBackgroundColor": "#d4237a",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#d4237a",
+    "list": [
+      {
+        "pagePath": "pages/teacherList/teacherList",
+        "text": "讲师列表",
+        "iconPath": "/assets/images/tabbarImages/teacher-unsel.png",
+        "selectedIconPath": "/assets/images/tabbarImages/teacher-sel.png"
+      },
+      {
+        "pagePath": "pages/courseList/courseList",
+        "text": "课程列表",
+        "iconPath": "/assets/images/tabbarImages/course-unsel.png",
+        "selectedIconPath": "/assets/images/tabbarImages/course-sel.png"
+      }
+    ]
+  },
+  "pages": [
+    "pages/teacherList/teacherList",
+    "pages/courseList/courseList",
+    "pages/newTest00/newTest00"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

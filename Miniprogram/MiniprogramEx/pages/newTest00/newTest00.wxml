@@ -1,0 +1,38 @@
+<!--components/x-courseItem/x-courseItem.wxml-->
+<block wx:for="{{courseItems}}">
+<view class="courseItem {{item.isStar? 'Star': ''}}">
+  <view class="post">
+    <image src="{{item.courseImage}}" mode="aspectFill"></image>
+  </view>
+  
+  <view class="desc">
+    <text class="courseTitle">{{item.courseTitle}}</text>
+    <text class="courseTeacher">讲师: {{item.courseTeacher}} <text class="isStar" wx:if="{{item.isStar}}">星级讲师</text></text>
+    <text class="courseStudentnumb">报名人数：{{item.courseStudentnum>=1000? item.courseStudentnum/1000+"k" : item.courseStudentnum}}人</text>
+
+    <text>{{index}}</text>
+  </view>
+</view>
+</block>
+
+<block wx:for="{{testDo}}">
+<switch/>
+<text>{{item}}</text>
+</block>
+
+<!--   <view wx:if="{{score==100}}">满分</view>
+  <view wx:elif="{{score>=90}}">优秀</view>
+  <view wx:elif="{{score>=80}}">及格</view>
+  <view wx:elif="{{score<80}}">不及格</view> -->
+<!-- 
+  <block wx:if="{{score>=60}}">
+    <view>及格</view>
+    <view>奖励一个校花</view>
+  </block>
+
+    <block wx:else>
+    <view>不及格</view>
+    <view>滚回去努力</view>
+  </block> -->
+
+<view hidden="{{true}}">及格</view>

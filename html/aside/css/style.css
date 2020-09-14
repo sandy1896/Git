@@ -1,0 +1,22 @@
+.wrap{
+    background: gray;
+    width:80%;
+    margin:auto;
+}
+
+.content{
+    background: red;
+    float:left;
+    width:80%;
+}
+
+aside{
+    background:brown;
+    float:left;
+    width:20%;    
+}
+
+aside ul{
+    list-style: none;
+    padding-left: 0;
+}

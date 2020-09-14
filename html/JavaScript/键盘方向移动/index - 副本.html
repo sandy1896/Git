@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            #box1{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                position: absolute;
+            }
+        </style>
+
+        <script>
+            window.onload=function(){
+                document.onkeydown=function(event){
+                    event=event||window.event;
+                    // 定义一个速度
+                    var speed=30;
+
+                    // 按ctrl加速
+                    if(event.ctrlKey){
+                        var speed =100;
+                    }
+                    switch(event.keyCode){
+                        case 37:
+                        // alert("向左");
+                        box1.style.left=box1.offsetLeft-speed+"px";
+                        break;
+                        case 39:
+                        // alert("向右");
+                        box1.style.left=box1.offsetLeft+speed+"px";
+                        break;
+                        case 38:
+                        // alert("向上");
+                        box1.style.top=box1.offsetTop-speed+"px";
+                        break;
+                        case 40:
+                        // alert("向下");
+                        box1.style.top=box1.offsetTop+speed+"px";
+                        break;
+                    };
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="box1"></div>
+    </body>
+</html>

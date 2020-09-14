@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>淡入淡出</title>
+    </head>
+    <style>
+        *{
+            margin: 0px;            
+        }
+        .div1{
+            position:absolute;
+            width: 200px;
+            height: 200px;
+            top: 50px;
+            left: 10px;
+            background-color: red;            
+        }
+    </style>
+
+    <body>
+        <button id="btn1">慢慢淡出</button>
+        <button id="btn2">慢慢淡入</button>
+        <button id="btn3">淡出/淡入切换</button>
+
+        <div class="div1"></div>
+
+        <script src="js/jquery.js"></script>
+        <script>
+            var $div1=$('.div1')
+            $('#btn1').click(function(){
+                $div1.fadeOut(2000)
+            })
+            $('#btn2').click(function(){
+                $div1.fadeIn()                
+            })
+            $('#btn3').click(function(){
+                $div1.fadeToggle(1500)                
+            })
+        </script>
+    </body>
+</html>

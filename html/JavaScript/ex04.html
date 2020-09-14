@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            var ar01=[2,1,4,3];
+            var ar02=[6,5,8,7];
+            
+            // concat()
+            ar01.concat(ar02);
+            console.log(ar01);
+            console.log(ar02);
+            var ar03=ar01.concat(ar02);
+            console.log(ar03);
+
+            // splice()
+            ar03.splice(0,0,9);
+            console.log(ar03);
+
+            // sort()
+            ar03.sort();
+            console.log(ar03);
+
+            // function()
+            ar03.sort(function(a,b){
+                return b-a;
+            })
+            console.log(ar03);
+
+            (function(){
+                alert("Hello world!")
+            })();
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

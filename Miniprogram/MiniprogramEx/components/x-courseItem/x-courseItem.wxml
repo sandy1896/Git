@@ -1,0 +1,12 @@
+<!--components/x-courseItem/x-courseItem.wxml-->
+<view class="courseItem">
+  <view class="post">
+    <image src="/assets/images/ff.jpg" mode="aspectFill"></image>
+  </view>
+  
+  <view class="desc">
+    <text class="courseTitle">一分钟健身课系列</text>
+    <text class="courseTeacher">讲师: Andy</text>
+    <text class="courseStudentnumb">报名人数：100人</text>
+  </view>
+</view>

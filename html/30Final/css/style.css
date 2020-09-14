@@ -1,0 +1,172 @@
+/*
+ **************
+ * =miscellaneous
+ **************
+*/
+.container_24{
+    margin-top: 10px;
+}
+
+p{
+    font-size: 13px;
+    line-height: 20px;
+    color: #353535;
+}
+h1,h2{
+    letter-spacing: -1px;
+}
+h3{
+    font-size: 26px;
+    text-transform: lowercase;
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    line-height: 1em;
+}
+blockquote, blockquote p{
+    font-size: 15px;
+    line-height: 20px;
+    font-style: italic;
+    color:#0e0e0e;
+    padding-left: 13px;
+}
+blockquote{
+    position: relative;
+}
+a{
+    color:#7e7e7e;
+    text-decoration: none;  
+}
+
+a:hover, .selected{
+    color: black;
+}
+
+li{
+    margin-left: 24px;
+}
+
+.button{
+    background: #242324;
+    padding: 6px;
+}
+
+.button:hover{
+    color: white;
+}
+
+/*
+ **************
+ * =header
+ **************
+*/
+header{
+    overflow: hidden;
+}
+
+header h1{  
+  text-indent:-999999px ;  
+  float: left; 
+  margin-bottom: 0;
+}
+
+header h1 a{
+    background: url(../img/960_logo.png) no-repeat;
+    width: 174px;
+    height: 23px;
+    margin: 0 22px; 
+    float: left;
+}
+
+/*
+ **************
+ * =nav
+ **************
+*/
+
+nav{
+    float: right;
+    padding-top: 12px;
+}
+
+nav li{
+    display: inline;    
+}
+
+nav a{
+    text-transform: lowercase;
+}
+/*
+ **************
+ * =banner
+ **************
+*/
+
+.banner{
+    background: url(../img/maxresdefault.jpg) no-repeat;
+    width: 695px; 
+    height: 231px;
+    position: relative;   
+}
+.banner h2{
+    color:white;
+    font-size: 26px;
+    width: 400px;
+    font-weight: normal;
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background-color: rgba(0,0,0,.5);
+    padding: 0 8px;
+}
+.callout{
+    background: black;
+    height: 231px;
+    width: 200px;    
+}
+
+/*
+ **************
+ * =main
+ **************
+*/
+
+.main{
+    margin-top: 20px;
+}
+.main blockquote p:first-child:before, .main blockquote p:last-child:after{
+    font-size: 40px;
+    color: #dfdfdf;
+    font-style: italic;   
+}
+
+.main blockquote p:first-child:before{
+    content: '"';
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+.main blockquote p:last-child:after{
+    content: '"';
+    float: right;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+}
+
+.main img{
+    width: 450px;
+    height: 200px;
+}
+
+/*
+ **************
+ * =footer
+ **************
+*/
+
+footer{
+    clear: both;
+    border-top: 1px solid #d1d1d1
+}
+

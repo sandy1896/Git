@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>        
+    </head>
+    <body>
+        <input type="text" name="text01" id="txt1" value="andy">
+        <input type="button" value="°´Å¥" onclick="clickMe()">
+        <script>
+            // function clickMe(){
+            //     var tag01=document.getElementById("txt1");
+            //     alert(tag01.value);
+            //     alert(event.target.value);
+            // }
+            var changeMe=function(){
+                alert(event.target.value);
+            }
+            document.getElementById("txt1").onchange=changeMe;
+        </script>
+    </body>
+</html>
